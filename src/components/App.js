@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import getCharactersFromApi from '../services/charactersApi';
+import CharactersList from './CharactersList';
 import '../styles/App.scss';
 
 function App() {
@@ -20,10 +21,7 @@ function App() {
         </form>
       </section>
       <section>
-        <ul>
-          <li>Aquí va un personaje</li>
-          <li>Aquí va otro</li>
-        </ul>
+        <CharactersList data={data} />
       </section>
     </div>
   );
