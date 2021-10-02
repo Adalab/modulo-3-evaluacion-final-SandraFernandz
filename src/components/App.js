@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import getCharactersFromApi from '../services/charactersApi';
 import CharactersList from './CharactersList';
 import '../styles/App.scss';
+import Filters from './Filters';
+import { Switch, Route } from 'react-router';
 
 function App() {
   const [data, setData] = useState([]);
@@ -30,23 +32,27 @@ function App() {
     character.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
   );
   return (
-    <div>
+    <>
       <h1>Rick and Morty</h1>
-      <section>
-        <form action="">
-          <label htmlFor="name">Encuentra un personaje</label>
-          <input
-            type="text"
-            id="name"
-            value={searchName}
-            onChange={handleChangeSearchName}
-          />
-        </form>
-      </section>
-      <section>
-        <CharactersList data={filteredData} />
-      </section>
-    </div>
+      <div>
+        <Switch>
+          <Route path="/">
+            <section>
+              <Filters
+                searchName={searchName}
+                handleChangeSearchName={handleChangeSearchName}
+              />
+            </section>
+            <section>
+              <CharactersList data={filteredData} />
+            </section>
+          </Route>
+          <Route path="/user/:id">
+            <section>Aquí va el componente que todavía no he hecho.</section>
+          </Route>
+        </Switch>
+      </div>
+    </>
   );
 }
 
