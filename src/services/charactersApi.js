@@ -10,6 +10,9 @@ function getCharactersFromApi() {
           name: character.name,
           species: character.species,
           image: character.image,
+          episodes: character.episode.length,
+          status: character.status,
+          planet: character.origin.name,
         };
       });
     });

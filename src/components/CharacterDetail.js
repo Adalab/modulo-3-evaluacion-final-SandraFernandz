@@ -1,14 +1,13 @@
 function CharacterDetail(props) {
   return (
     <section>
-      <img src={props.charactersData.image} alt="" />
+      <img src={props.character.image} alt="" />
       <ul>
-        <li>
-          <h4>Nombre: {props.charactersData.name}</h4>
-        </li>
-        <li>
-          <p>Especie: {props.charactersData.species}</p>
-        </li>
+        <li>Nombre: {props.character.name}</li>
+        <li>Especie: {props.character.species}</li>
+        <li>Estado: {props.character.status}</li>
+        <li>Planeta: {props.character.planet}</li>
+        <li>Número de episodios: {props.character.episodes}</li>
       </ul>
     </section>
   );

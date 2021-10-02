@@ -17,23 +17,19 @@ function App() {
     });
   }, []);
 
-  {
-    /*función manejadora del input*/
-  }
-
   const handleChangeSearchName = (ev) => {
     setSearchName(ev.currentTarget.value);
   };
 
-  {
-    /*función para filtrar por nombre y pasamos datos filtrados a map en CharactersList para que los pinte*/
-  }
   const routeData = useRouteMatch('/character/:id');
+
   const characterId = routeData !== null ? routeData.params.id : '';
 
-  const selectedContact = data.find(
-    (character) => character.id === characterId
+  const selectedCharacter = data.find(
+    (character) => character.id === parseInt(characterId)
   );
+
+  console.log(selectedCharacter);
 
   const filteredData = data.filter((character) =>
     character.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
@@ -45,14 +41,7 @@ function App() {
         <Switch>
           <Route path="/character/:id">
             <section>
-              <CharacterDetail
-                user={{
-                  name: 'pepino',
-                  species: 'pepino',
-                  image: 'pepino',
-                  id: 'pepino',
-                }}
-              />
+              <CharacterDetail character={selectedCharacter} />
             </section>
           </Route>
 

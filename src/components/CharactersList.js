@@ -11,7 +11,6 @@ function CharactersList(props) {
     );
   });
 
-  console.log(props);
   return <ul>{html}</ul>;
 }
 
