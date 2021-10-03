@@ -42,7 +42,7 @@ function App() {
         <Switch>
           <Route path="/character/:id">
             <section>
-              <CharacterDetail id={characterId} character={selectedCharacter} />
+              <CharacterDetail character={selectedCharacter} />
             </section>
           </Route>
 
