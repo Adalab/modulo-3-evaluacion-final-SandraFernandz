@@ -1,7 +1,10 @@
 function CharacterDetail(props) {
   return (
     <section>
-      <img src={props.character.image} alt="" />
+      <img
+        src={props.character.image}
+        alt={`Esta es la foto de ${props.character.name}`}
+      />
       <ul>
         <li>Nombre: {props.character.name}</li>
         <li>Especie: {props.character.species}</li>

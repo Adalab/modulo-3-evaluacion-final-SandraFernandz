@@ -4,7 +4,10 @@ function CharactersCard(props) {
   console.log('CharactersCard', props);
   return (
     <Link to={`./character/${props.charactersData.id}`}>
-      <img src={props.charactersData.image} alt="" />
+      <img
+        src={props.charactersData.image}
+        alt={`Esta es la foto de ${props.charactersData.name}`}
+      />
       <h4>{props.charactersData.name}</h4>
       <p>{props.charactersData.species}</p>
     </Link>

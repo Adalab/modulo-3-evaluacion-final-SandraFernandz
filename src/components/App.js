@@ -22,6 +22,7 @@ function App() {
   };
 
   const routeData = useRouteMatch('/character/:id');
+  console.log(routeData);
 
   const characterId = routeData !== null ? routeData.params.id : '';
 
@@ -41,7 +42,7 @@ function App() {
         <Switch>
           <Route path="/character/:id">
             <section>
-              <CharacterDetail character={selectedCharacter} />
+              <CharacterDetail id={characterId} character={selectedCharacter} />
             </section>
           </Route>
 
@@ -57,7 +58,9 @@ function App() {
             </section>
           </Route>
           <Route>
-            <section>¡Oh! Algo ha salido mal. Vuelve a intentarlo.</section>
+            <section>
+              <p>¡Oh! Algo ha salido mal. Vuelve a intentarlo.</p>
+            </section>
           </Route>
         </Switch>
       </div>
