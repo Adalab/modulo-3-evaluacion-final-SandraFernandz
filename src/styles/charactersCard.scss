@@ -1,5 +1,6 @@
+@import '../styles/reset.scss';
+
 .card {
-  background-color: rgb(222, 135, 176);
   display: inline-block;
   text-decoration: none;
   border: 50px;
@@ -7,10 +8,18 @@
 
   &_picture {
     width: 200px;
+    background-color: #00b0c9;
   }
-
   &_description {
-    background-color: cornsilk;
-    color: white;
+    margin-bottom: 0px;
+
+    &_title {
+      color: white;
+      background-color: #00b0c9;
+    }
+    &_text {
+      color: white;
+      background-color: #00b0c9;
+    }
   }
 }

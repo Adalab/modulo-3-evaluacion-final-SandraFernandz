@@ -11,8 +11,8 @@ function CharactersCard(props) {
         alt={`Esta es la foto de ${props.charactersData.name}`}
       />
       <div className="card_description">
-        <h4>{props.charactersData.name}</h4>
-        <p>{props.charactersData.species}</p>
+        <h4 className="card_description_title">{props.charactersData.name}</h4>
+        <p className="card_description_text">{props.charactersData.species}</p>
       </div>
     </Link>
   );
