@@ -1,0 +1,16 @@
+.card {
+  background-color: rgb(222, 135, 176);
+  display: inline-block;
+  text-decoration: none;
+  border: 50px;
+  margin: 20px;
+
+  &_picture {
+    width: 200px;
+  }
+
+  &_description {
+    background-color: cornsilk;
+    color: white;
+  }
+}

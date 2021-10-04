@@ -1,4 +1,5 @@
 import CharactersCard from './CharactersCard';
+import '../styles/charactersList.scss';
 
 function CharactersList(props) {
   console.log('CharactersList', props);
@@ -11,7 +12,7 @@ function CharactersList(props) {
     );
   });
 
-  return <ul>{html}</ul>;
+  return <ul className="list">{html}</ul>;
 }
 
 export default CharactersList;

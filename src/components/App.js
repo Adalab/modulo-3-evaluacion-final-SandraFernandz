@@ -5,6 +5,7 @@ import '../styles/App.scss';
 import Filters from './Filters';
 import { Switch, Route, useRouteMatch } from 'react-router';
 import CharacterDetail from './CharacterDetail';
+import '../styles/App.scss';
 
 function App() {
   const [data, setData] = useState([]);
@@ -37,8 +38,8 @@ function App() {
   );
   return (
     <>
-      <h1>Rick and Morty</h1>
-      <div>
+      <h1 className="title">Rick and Morty</h1>
+      <div className="all">
         <Switch>
           <Route path="/character/:id">
             <section>
