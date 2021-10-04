@@ -12,7 +12,7 @@ function CharactersList(props) {
     );
   });
   if (props.data.length === 0) {
-    return <p>Este personaje no existe</p>;
+    return <p className="unknown">Lo sentimos, ese personaje no existe.</p>;
   } else {
     return <ul className="list">{html}</ul>;
   }

@@ -11,6 +11,7 @@ import '../styles/app.scss';
 function App() {
   const [data, setData] = useState([]);
   const [searchName, setSearchName] = useState('');
+  const [searchSpecies, setSearchSpecies] = useState('all');
 
   useEffect(() => {
     getCharactersFromApi().then((initialData) => {
@@ -21,6 +22,9 @@ function App() {
 
   const handleChangeSearchName = (ev) => {
     setSearchName(ev.currentTarget.value);
+  };
+  const handleSearchSpecies = (ev) => {
+    setSearchSpecies(ev.currentTarget.value);
   };
 
   const routeData = useRouteMatch('/character/:id');
@@ -34,10 +38,17 @@ function App() {
 
   console.log(selectedCharacter);
 
-  const filteredData = data.filter((character) =>
-    character.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
-  );
-  // .filter((character)=> character.species === searchSpecies);
+  const filteredData = data
+    .filter((character) =>
+      character.name
+        .toLocaleLowerCase()
+        .includes(searchName.toLocaleLowerCase())
+    )
+    .filter(
+      (character) =>
+        searchSpecies === 'all' ||
+        character.species.toLowerCase() === searchSpecies
+    );
   return (
     <>
       <Header />
@@ -55,6 +66,8 @@ function App() {
               <Filters
                 searchName={searchName}
                 handleChangeSearchName={handleChangeSearchName}
+                searchSpecies={searchSpecies}
+                handleSearchSpecies={handleSearchSpecies}
               />
             </section>
             <section>
