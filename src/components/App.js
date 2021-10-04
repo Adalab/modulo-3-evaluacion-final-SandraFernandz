@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 import getCharactersFromApi from '../services/charactersApi';
 import CharactersList from './CharactersList';
-import '../styles/App.scss';
+import '../styles/app.scss';
 import Filters from './Filters';
 import { Switch, Route, useRouteMatch } from 'react-router';
 import CharacterDetail from './CharacterDetail';
-import '../styles/App.scss';
-// import logo from '../Rick_and_Morty_-_logo_(English) (1).png/';
+import logo from '../images/Rick_and_Morty.png';
 
 function App() {
   const [data, setData] = useState([]);
@@ -39,8 +38,7 @@ function App() {
   );
   return (
     <>
-      {/* <img src={logo} alt="" /> */}
-      <h1 className="title">Rick and Morty</h1>
+      <img className="title" src={logo} alt="logo" />
       <div className="all">
         <Switch>
           <Route path="/character/:id">
