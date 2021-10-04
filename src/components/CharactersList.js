@@ -11,8 +11,11 @@ function CharactersList(props) {
       </li>
     );
   });
-
-  return <ul className="list">{html}</ul>;
+  if (props.data.length === 0) {
+    return <p>Este personaje no existe</p>;
+  } else {
+    return <ul className="list">{html}</ul>;
+  }
 }
 
 export default CharactersList;

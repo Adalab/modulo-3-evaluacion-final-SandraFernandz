@@ -37,6 +37,7 @@ function App() {
   const filteredData = data.filter((character) =>
     character.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
   );
+  // .filter((character)=> character.species === searchSpecies);
   return (
     <>
       <Header />

@@ -11,6 +11,12 @@ function Filters(props) {
         value={props.searchName}
         onChange={props.handleChangeSearchName}
       />
+      <label htmlFor="species">Selecciona por especie</label>
+      <select className="form_input" name="species" id="">
+        <option value="all">Todas</option>
+        <option value="human">Humano</option>
+        <option value="alien">Alien</option>
+      </select>
     </form>
   );
 }
