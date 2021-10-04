@@ -1,3 +1,5 @@
+import '../styles/filterBySpecies.scss';
+
 function FilterBySpecies(props) {
   return (
     <>
