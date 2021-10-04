@@ -1,3 +1,5 @@
+import '../styles/characterDetail.scss';
+
 function CharacterDetail(props) {
   if (props.character === undefined) {
     return (
@@ -7,12 +9,12 @@ function CharacterDetail(props) {
     );
   } else {
     return (
-      <section>
+      <section className="detail">
         <img
           src={props.character.image}
           alt={`Esta es la foto de ${props.character.name}`}
         />
-        <ul>
+        <ul className="detail_list">
           <li>Nombre: {props.character.name}</li>
           <li>Especie: {props.character.species}</li>
           <li>Estado: {props.character.status}</li>
