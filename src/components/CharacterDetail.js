@@ -3,7 +3,7 @@ import '../styles/characterDetail.scss';
 function CharacterDetail(props) {
   if (props.character === undefined) {
     return (
-      <section>
+      <section className="notFound">
         <p>Ese personaje no existe</p>
       </section>
     );

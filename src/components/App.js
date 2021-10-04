@@ -6,6 +6,7 @@ import Filters from './Filters';
 import { Switch, Route, useRouteMatch } from 'react-router';
 import CharacterDetail from './CharacterDetail';
 import '../styles/App.scss';
+// import logo from '../Rick_and_Morty_-_logo_(English) (1).png/';
 
 function App() {
   const [data, setData] = useState([]);
@@ -38,6 +39,7 @@ function App() {
   );
   return (
     <>
+      {/* <img src={logo} alt="" /> */}
       <h1 className="title">Rick and Morty</h1>
       <div className="all">
         <Switch>
