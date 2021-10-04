@@ -1,4 +1,5 @@
 import '../styles/filters.scss';
+import FilterBySpecies from './FilterBySpecies';
 
 function Filters(props) {
   return (
@@ -11,18 +12,10 @@ function Filters(props) {
         value={props.searchName}
         onChange={props.handleChangeSearchName}
       />
-      <label htmlFor="species">Selecciona por especie</label>
-      <select
-        className="form_input"
-        name="species"
-        id="species"
-        value={props.searchSpecies}
-        onChange={props.handleSearchSpecies}
-      >
-        <option value="all">Todas</option>
-        <option value="human">Humano</option>
-        <option value="alien">Alien</option>
-      </select>
+      <FilterBySpecies
+        searchSpecies={props.searchSpecies}
+        handleSearchSpecies={props.handleSearchSpecies}
+      />
     </form>
   );
 }
