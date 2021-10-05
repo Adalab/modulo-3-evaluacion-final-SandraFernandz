@@ -1,7 +1,6 @@
 import CharactersCard from './CharactersCard';
 import '../styles/charactersList.scss';
 import arrow from '../images/arrow.png';
-import { Link } from 'react-router-dom';
 
 function CharactersList(props) {
   console.log('CharactersList', props);
@@ -18,14 +17,12 @@ function CharactersList(props) {
       <div className="unknown">
         <p className="unknown_message">Lo sentimos, ese personaje no existe.</p>
         <p className="unknown_container">
-          <img
-            src={arrow}
-            className="unknown_container_arrow"
-            alt="Flecha para regresar a página principal"
+          <input
+            type="button"
+            value="Volver"
+            className="unknown_container_button"
+            onClick={props.handleBackHome}
           />
-          <Link to="/" className="unknown_container_link">
-            Volver
-          </Link>
         </p>
       </div>
     );

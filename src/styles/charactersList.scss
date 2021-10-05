@@ -16,11 +16,15 @@
   }
   &_container {
     text-align: center;
-  }
-  &_container_link {
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
+    &_link {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    &_button {
+      color: black;
+      background-color: white;
+    }
   }
   &_container_arrow {
     height: 15px;

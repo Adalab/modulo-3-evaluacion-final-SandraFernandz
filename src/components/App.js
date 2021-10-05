@@ -27,6 +27,10 @@ function App() {
     setSearchSpecies(ev.currentTarget.value);
   };
 
+  const handleBackHome = (ev) => {
+    setSearchName('');
+  };
+
   const routeData = useRouteMatch('/character/:id');
   console.log(routeData);
 
@@ -71,7 +75,10 @@ function App() {
               />
             </section>
             <section>
-              <CharactersList data={filteredData} />
+              <CharactersList
+                handleBackHome={handleBackHome}
+                data={filteredData}
+              />
             </section>
           </Route>
           <Route>
