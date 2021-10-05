@@ -8,7 +8,21 @@
   //justify-content: space-between;
 }
 .unknown {
-  margin-top: 50px;
-  font-size: 24px;
-  text-align: center;
+  &_message {
+    margin-top: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &_container {
+    text-align: center;
+  }
+  &_container_link {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  &_container_arrow {
+    height: 15px;
+  }
 }

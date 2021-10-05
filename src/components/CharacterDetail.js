@@ -7,16 +7,6 @@ function CharacterDetail(props) {
     return (
       <section className="notFound">
         <p>Ese personaje no existe</p>
-        <p className="notFound_container">
-          <Link to="/" className="notFound_link">
-            Volver
-            <img
-              src={arrow}
-              className="notFound_arrow"
-              alt="Flecha para regresar a página principal"
-            />
-          </Link>
-        </p>
       </section>
     );
   } else {
