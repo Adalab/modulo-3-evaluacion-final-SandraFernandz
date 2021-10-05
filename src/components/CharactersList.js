@@ -1,6 +1,5 @@
 import CharactersCard from './CharactersCard';
 import '../styles/charactersList.scss';
-import arrow from '../images/arrow.png';
 
 function CharactersList(props) {
   console.log('CharactersList', props);

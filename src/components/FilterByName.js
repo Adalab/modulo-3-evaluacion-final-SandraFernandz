@@ -1,3 +1,5 @@
+import '../styles/filterByName.scss';
+
 function FilterByName(props) {
   return (
     <>

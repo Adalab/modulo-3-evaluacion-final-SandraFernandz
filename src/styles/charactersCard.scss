@@ -14,12 +14,16 @@
     margin-bottom: 0px;
 
     &_title {
+      padding-top: 5px;
       color: white;
       background-color: #00b0c9;
+      padding-left: 10px;
     }
     &_text {
       color: white;
       background-color: #00b0c9;
+      padding-bottom: 5px;
+      padding-left: 10px;
     }
   }
 }

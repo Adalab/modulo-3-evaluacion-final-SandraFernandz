@@ -1,9 +1,11 @@
 .detail {
   text-align: center;
   margin-top: 100px;
+
   &_container {
     margin-bottom: 10px;
     font-size: 17px;
+
     &_link {
       color: white;
       text-decoration: none;
@@ -19,13 +21,5 @@
     text-align: left;
     display: inline-block;
     margin: 15px;
-  }
-}
-.notFound {
-  font-size: 40px;
-  text-align: center;
-  &_arrow {
-    height: 20px;
-    background-color: chartreuse;
   }
 }
